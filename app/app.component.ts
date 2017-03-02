@@ -23,10 +23,18 @@ export class AppComponent {
   */
   public movie:Movie;
   public showData:boolean;
+  public movies;
 
   constructor(){
     this.showData=false;
-    this.movie= new Movie(1, "Titulo", "Batman v Superman", "Zack Snider", 2016);
+    this.movie = new Movie(1, "Titulo", "Batman v Superman", "Zack Snider", 2016);
+
+    this.movies = [
+      new Movie(1, "Titulo uno", "Batman", "Zack Snider", 2017),
+      new Movie(2, "Titulo dos", "Superman", "Zoe", 2016),
+      new Movie(3, "Titulo tres", "Goku", "KLW", 2017)
+    ];
+
     this.debug();
   }
   /*

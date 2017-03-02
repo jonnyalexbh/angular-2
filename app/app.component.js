@@ -28,6 +28,11 @@ System.register(["angular2/core", "./model/movie"], function (exports_1, context
                 function AppComponent() {
                     this.showData = false;
                     this.movie = new movie_1.Movie(1, "Titulo", "Batman v Superman", "Zack Snider", 2016);
+                    this.movies = [
+                        new movie_1.Movie(1, "Titulo uno", "Batman", "Zack Snider", 2017),
+                        new movie_1.Movie(2, "Titulo dos", "Superman", "Zoe", 2016),
+                        new movie_1.Movie(3, "Titulo tres", "Goku", "KLW", 2017)
+                    ];
                     this.debug();
                 }
                 /*
