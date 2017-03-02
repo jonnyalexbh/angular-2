@@ -41,5 +41,11 @@ export class AppComponent {
   onShowHide(value){
     this.showData=value;
   }
+  /*
+  * onLog
+  */
+  onLog(){
+    console.log(this.movie.title);
+  }
 
 }

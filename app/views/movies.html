@@ -1,4 +1,4 @@
-<div class="">
+<div>
 
   <h1>{{movie.title}}</h1>
   <p>List movies</p>
@@ -11,5 +11,9 @@
     <li><b>director: </b> {{movie.director}}</li>
     <li><b>year: </b> {{movie.year}}</li>
   </ul>
+
+  <p>
+    <input type="text" (keypress)="onLog()" [(ngModel)]="movie.title">
+  </p>
 
 </div>

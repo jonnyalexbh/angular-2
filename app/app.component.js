@@ -42,6 +42,12 @@ System.register(["angular2/core", "./model/movie"], function (exports_1, context
                 AppComponent.prototype.onShowHide = function (value) {
                     this.showData = value;
                 };
+                /*
+                * onLog
+                */
+                AppComponent.prototype.onLog = function () {
+                    console.log(this.movie.title);
+                };
                 return AppComponent;
             }());
             AppComponent = __decorate([
