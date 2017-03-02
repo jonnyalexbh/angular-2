@@ -37,7 +37,8 @@ System.register(["angular2/core", "./model/movie"], function (exports_1, context
             AppComponent = __decorate([
                 core_1.Component({
                     selector: 'my-app',
-                    templateUrl: "app/views/movies.html"
+                    templateUrl: "app/views/movies.html",
+                    styleUrls: ["assets/css/styles.css"]
                 })
                 /*
                 * exportamos la clase para que el componente este disponible

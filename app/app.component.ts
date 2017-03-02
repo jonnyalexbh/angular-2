@@ -11,7 +11,8 @@ import {Movie} from './model/movie';
 */
 @Component({
   selector: 'my-app',
-  templateUrl:"app/views/movies.html"
+  templateUrl:"app/views/movies.html",
+  styleUrls:["assets/css/styles.css"]
 })
 /*
 * exportamos la clase para que el componente este disponible
