@@ -10,12 +10,7 @@ import {Component} from 'angular2/core';
 */
 @Component({
   selector: 'my-app',
-  template: `<h1>{{title}}</h1>
-  <ul>
-  <li><b>movie: </b> {{movie}}</li>
-  <li><b>director: </b> {{director}}</li>
-  <li><b>year: </b> {{year}}</li>
-  </ul>`
+  templateUrl:"app/views/movies.html"
 })
 /*
 * exportamos la clase para que el componente este disponible
@@ -24,8 +19,8 @@ export class AppComponent {
   /*
   * definimos las propiedades y su tipo
   */
-  public title = "Peliculas con Angular 2";
-  movie = "Batman v Superman";
-  public director = "Zack Snider";
-  public year = "2016";
+  public title:string = "Peliculas con Angular 2";
+  public movie:string = "Batman v Superman";
+  public director:string = "Zack Snider";
+  public year:number = 2016;
 }

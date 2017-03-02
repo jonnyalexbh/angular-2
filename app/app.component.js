@@ -32,14 +32,14 @@ System.register(["angular2/core"], function (exports_1, context_1) {
                     this.title = "Peliculas con Angular 2";
                     this.movie = "Batman v Superman";
                     this.director = "Zack Snider";
-                    this.year = "2016";
+                    this.year = 2016;
                 }
                 return AppComponent;
             }());
             AppComponent = __decorate([
                 core_1.Component({
                     selector: 'my-app',
-                    template: "<h1>{{title}}</h1>\n  <ul>\n  <li><b>movie: </b> {{movie}}</li>\n  <li><b>director: </b> {{director}}</li>\n  <li><b>year: </b> {{year}}</li>\n  </ul>"
+                    templateUrl: "app/views/movies.html"
                 })
                 /*
                 * exportamos la clase para que el componente este disponible
