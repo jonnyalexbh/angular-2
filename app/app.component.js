@@ -6,6 +6,9 @@ System.register(["angular2/core"], function (exports_1, context_1) {
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
+    var __metadata = (this && this.__metadata) || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+    };
     var __moduleName = context_1 && context_1.id;
     var core_1, AppComponent;
     return {
@@ -19,12 +22,6 @@ System.register(["angular2/core"], function (exports_1, context_1) {
             * exportamos la clase para que el componente este disponible
             */
             AppComponent = (function () {
-                /*
-                * decorador component indicamos el selector donde cargar la
-                * plantilla y definimos el html de la plantilla. Utilizamos las
-                * dobles llaves para mostrar el valor de las propiedades o
-                * atributos de la clase AppComponent
-                */
                 function AppComponent() {
                     /*
                     * definimos las propiedades y su tipo
@@ -33,7 +30,11 @@ System.register(["angular2/core"], function (exports_1, context_1) {
                     this.movie = "Batman v Superman";
                     this.director = "Zack Snider";
                     this.year = 2016;
+                    this.holaMundo();
                 }
+                AppComponent.prototype.holaMundo = function () {
+                    console.log("Pelicula: " + this.movie + " - " + this.director + " - " + this.year);
+                };
                 return AppComponent;
             }());
             AppComponent = __decorate([
@@ -44,6 +45,8 @@ System.register(["angular2/core"], function (exports_1, context_1) {
                 /*
                 * exportamos la clase para que el componente este disponible
                 */
+                ,
+                __metadata("design:paramtypes", [])
             ], AppComponent);
             exports_1("AppComponent", AppComponent);
         }

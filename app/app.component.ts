@@ -20,7 +20,20 @@ export class AppComponent {
   * definimos las propiedades y su tipo
   */
   public title:string = "Peliculas con Angular 2";
-  public movie:string = "Batman v Superman";
-  public director:string = "Zack Snider";
-  public year:number = 2016;
+
+  public movie:string;
+  public director:string;
+  public year:number;
+
+  constructor(){
+    this.movie = "Batman v Superman";
+    this.director = "Zack Snider";
+    this.year = 2016;
+    this.holaMundo();
+  }
+
+  public holaMundo(){
+    console.log("Pelicula: " + this.movie+ " - "+ this.director+ " - "+ this.year);
+  }
+
 }
