@@ -3,3 +3,7 @@ h1{
   color: #0ca7f4;
   text-decoration: underline;
 }
+
+.showingData{
+  display: none;
+}

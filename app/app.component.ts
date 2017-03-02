@@ -22,14 +22,24 @@ export class AppComponent {
   * definimos las propiedades y su tipo
   */
   public movie:Movie;
+  public showData:boolean;
 
   constructor(){
+    this.showData=false;
     this.movie= new Movie(1, "Titulo", "Batman v Superman", "Zack Snider", 2016);
-    this.holaMundo();
+    this.debug();
   }
-
-  public holaMundo(){
+  /*
+  * debug
+  */
+  debug(){
     console.log(this.movie);
+  }
+  /*
+  * onShowHide
+  */
+  onShowHide(value){
+    this.showData=value;
   }
 
 }

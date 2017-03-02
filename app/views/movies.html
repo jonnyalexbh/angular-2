@@ -1,7 +1,15 @@
-<h1>{{movie.title}}</h1>
-<p>Listado de peliculas</p>
-<ul>
-  <li><b>movie: </b> {{movie.title}}</li>
-  <li><b>director: </b> {{movie.director}}</li>
-  <li><b>year: </b> {{movie.year}}</li>
-</ul>
+<div class="">
+
+  <h1>{{movie.title}}</h1>
+  <p>List movies</p>
+
+  <button (click)="onShowHide(true)" [class.showingData]="showData === true">Show date</button>
+  <button (click)="onShowHide(false)" [class.showingData]="showData === false">hidden date</button>
+
+  <ul *ngIf="showData === true">
+    <li><b>movie: </b> {{movie.title}}</li>
+    <li><b>director: </b> {{movie.director}}</li>
+    <li><b>year: </b> {{movie.year}}</li>
+  </ul>
+
+</div>

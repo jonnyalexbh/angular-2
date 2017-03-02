@@ -26,11 +26,21 @@ System.register(["angular2/core", "./model/movie"], function (exports_1, context
             */
             AppComponent = (function () {
                 function AppComponent() {
+                    this.showData = false;
                     this.movie = new movie_1.Movie(1, "Titulo", "Batman v Superman", "Zack Snider", 2016);
-                    this.holaMundo();
+                    this.debug();
                 }
-                AppComponent.prototype.holaMundo = function () {
+                /*
+                * debug
+                */
+                AppComponent.prototype.debug = function () {
                     console.log(this.movie);
+                };
+                /*
+                * onShowHide
+                */
+                AppComponent.prototype.onShowHide = function (value) {
+                    this.showData = value;
                 };
                 return AppComponent;
             }());
