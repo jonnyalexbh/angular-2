@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function (exports_1, context_1) {
+System.register(["angular2/core", "./model/movie"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10,11 +10,14 @@ System.register(["angular2/core"], function (exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, AppComponent;
+    var core_1, movie_1, AppComponent;
     return {
         setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (movie_1_1) {
+                movie_1 = movie_1_1;
             }
         ],
         execute: function () {
@@ -23,17 +26,11 @@ System.register(["angular2/core"], function (exports_1, context_1) {
             */
             AppComponent = (function () {
                 function AppComponent() {
-                    /*
-                    * definimos las propiedades y su tipo
-                    */
-                    this.title = "Peliculas con Angular 2";
-                    this.movie = "Batman v Superman";
-                    this.director = "Zack Snider";
-                    this.year = 2016;
+                    this.movie = new movie_1.Movie(1, "Titulo", "Batman v Superman", "Zack Snider", 2016);
                     this.holaMundo();
                 }
                 AppComponent.prototype.holaMundo = function () {
-                    console.log("Pelicula: " + this.movie + " - " + this.director + " - " + this.year);
+                    console.log(this.movie);
                 };
                 return AppComponent;
             }());

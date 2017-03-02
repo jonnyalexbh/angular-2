@@ -2,6 +2,7 @@
 * importar el núcleo de Angular
 */
 import {Component} from 'angular2/core';
+import {Movie} from './model/movie';
 /*
 * decorador component indicamos el selector donde cargar la
 * plantilla y definimos el html de la plantilla. Utilizamos las
@@ -19,21 +20,15 @@ export class AppComponent {
   /*
   * definimos las propiedades y su tipo
   */
-  public title:string = "Peliculas con Angular 2";
-
-  public movie:string;
-  public director:string;
-  public year:number;
+  public movie:Movie;
 
   constructor(){
-    this.movie = "Batman v Superman";
-    this.director = "Zack Snider";
-    this.year = 2016;
+    this.movie= new Movie(1, "Titulo", "Batman v Superman", "Zack Snider", 2016);
     this.holaMundo();
   }
 
   public holaMundo(){
-    console.log("Pelicula: " + this.movie+ " - "+ this.director+ " - "+ this.year);
+    console.log(this.movie);
   }
 
 }
