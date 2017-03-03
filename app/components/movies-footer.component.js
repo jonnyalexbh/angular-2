@@ -1,4 +1,4 @@
-System.register(["angular2/core", "./components/movies-list.component", "./components/movies-footer.component"], function (exports_1, context_1) {
+System.register(["angular2/core"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7,40 +7,33 @@ System.register(["angular2/core", "./components/movies-list.component", "./compo
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, movies_list_component_1, movies_footer_component_1, AppComponent;
+    var core_1, MoviesFooterComponent;
     return {
         setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (movies_list_component_1_1) {
-                movies_list_component_1 = movies_list_component_1_1;
-            },
-            function (movies_footer_component_1_1) {
-                movies_footer_component_1 = movies_footer_component_1_1;
             }
         ],
         execute: function () {
             /*
             * exportamos la clase para que el componente este disponible
             */
-            AppComponent = (function () {
-                function AppComponent() {
+            MoviesFooterComponent = (function () {
+                function MoviesFooterComponent() {
                 }
-                return AppComponent;
+                return MoviesFooterComponent;
             }());
-            AppComponent = __decorate([
+            MoviesFooterComponent = __decorate([
                 core_1.Component({
-                    selector: 'my-app',
-                    templateUrl: "app/views/movies.html",
-                    directives: [movies_list_component_1.MoviesListComponent, movies_footer_component_1.MoviesFooterComponent]
+                    selector: 'movies-footer',
+                    templateUrl: "app/views/movies-footer.html"
                 })
                 /*
                 * exportamos la clase para que el componente este disponible
                 */
-            ], AppComponent);
-            exports_1("AppComponent", AppComponent);
+            ], MoviesFooterComponent);
+            exports_1("MoviesFooterComponent", MoviesFooterComponent);
         }
     };
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=movies-footer.component.js.map

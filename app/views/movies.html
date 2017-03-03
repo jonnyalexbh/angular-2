@@ -1,29 +1,4 @@
 <div>
-
-  <h1>{{movie.title}}</h1>
-  <p>favorite movie</p>
-
-  <button (click)="onShowHide(true)" [class.showingData]="showData === true">Show date</button>
-  <button (click)="onShowHide(false)" [class.showingData]="showData === false">hidden date</button>
-
-  <ul *ngIf="showData === true">
-    <li><b>movie: </b> {{movie.title}}</li>
-    <li><b>director: </b> {{movie.director}}</li>
-    <li><b>year: </b> {{movie.year}}</li>
-  </ul>
-
-  <p><input type="text" (keypress)="onLog()" [(ngModel)]="movie.title"></p>
-
-  <hr>
-
-  <h3>movie list</h3>
-  <ul>
-    <ul *ngFor="#row of movies" style="margin-bottom: 15px;">
-      <li><b>id: </b> {{row.id}}</li>
-      <li><b>movie: </b> {{row.title}}</li>
-      <li><b>director: </b> {{row.director}}</li>
-      <li *ngIf="row.year"><b>year: </b> {{row.year}}</li>
-    </ul>
-  </ul>
-
+  <movies-list></movies-list>
+  <movies-footer></movies-footer>
 </div>

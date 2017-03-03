@@ -7,3 +7,16 @@ h1{
 .showingData{
   display: none;
 }
+
+.movie-title{
+  cursor: pointer;
+}
+
+.movie-title:hover{
+  text-decoration: underline;
+}
+
+.clicked{
+  font-size: 20px;
+  color: #00a128;
+}
