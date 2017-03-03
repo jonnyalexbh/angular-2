@@ -1,4 +1,11 @@
 <div>
-  <movies-list></movies-list>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['Movies']">Home</a></li>
+      <li><a href="">Add movie</a></li>
+      <li><a [routerLink]="['Contact']">Contact</a></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
   <movies-footer></movies-footer>
 </div>
