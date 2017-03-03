@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../model/movie"], function (exports_1, context_1) {
+System.register(["angular2/core", "../services/movies.services"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10,14 +10,14 @@ System.register(["angular2/core", "../model/movie"], function (exports_1, contex
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, movie_1, MoviesListComponent;
+    var core_1, movies_services_1, MoviesListComponent;
     return {
         setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (movie_1_1) {
-                movie_1 = movie_1_1;
+            function (movies_services_1_1) {
+                movies_services_1 = movies_services_1_1;
             }
         ],
         execute: function () {
@@ -25,13 +25,11 @@ System.register(["angular2/core", "../model/movie"], function (exports_1, contex
             * exportamos la clase para que el componente este disponible
             */
             MoviesListComponent = (function () {
-                function MoviesListComponent() {
+                function MoviesListComponent(_moviesServices) {
+                    this._moviesServices = _moviesServices;
                     this.showData = false;
-                    this.movies = [
-                        new movie_1.Movie(1, "Titulo uno", "Batman", "Zack Snider", 2017),
-                        new movie_1.Movie(2, "Titulo dos", "Superman", "Zoe", 2016),
-                        new movie_1.Movie(3, "Titulo tres", "Goku", "KLW", 2017)
-                    ];
+                    this.dataService = this._moviesServices.getHello();
+                    this.movies = this._moviesServices.getMovies();
                     this.movie = this.movies[0];
                     this.movieSeleted = this.movies[0];
                     this.debug();
@@ -67,13 +65,14 @@ System.register(["angular2/core", "../model/movie"], function (exports_1, contex
                 core_1.Component({
                     selector: 'movies-list',
                     templateUrl: "app/views/movies-list.html",
-                    styleUrls: ["assets/css/styles.css"]
+                    styleUrls: ["assets/css/styles.css"],
+                    providers: [movies_services_1.MoviesService]
                 })
                 /*
                 * exportamos la clase para que el componente este disponible
                 */
                 ,
-                __metadata("design:paramtypes", [])
+                __metadata("design:paramtypes", [movies_services_1.MoviesService])
             ], MoviesListComponent);
             exports_1("MoviesListComponent", MoviesListComponent);
         }
