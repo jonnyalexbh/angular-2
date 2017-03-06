@@ -34,13 +34,13 @@ System.register(["angular2/core", "../model/movie", "angular2/router", "../servi
                     this._routeParams = _routeParams;
                     this.TitleMovie = "";
                 }
-                AddMovieComponent.prototype.onAddMovie = function (title, director, year) {
-                    var movie = new movie_1.Movie(77, title, "N/A", director, year);
-                    this._moviesServices.insertMovie(movie);
+                AddMovieComponent.prototype.onSubmit = function () {
+                    this._moviesServices.insertMovie(this.newMovie);
                     this._router.navigate(["Movies"]);
                 };
                 AddMovieComponent.prototype.ngOnInit = function () {
                     this.TitleMovie = this._routeParams.get("title");
+                    this.newMovie = new movie_1.Movie(0, this._routeParams.get("title"), "N/A", this._routeParams.get("director"), parseInt(this._routeParams.get("year")));
                 };
                 return AddMovieComponent;
             }());

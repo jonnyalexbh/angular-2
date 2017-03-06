@@ -9,7 +9,7 @@
 
   <button (click)="onShowHide(true)" [class.showingData]="showData === true">Show date</button>
   <button (click)="onShowHide(false)" [class.showingData]="showData === false">hidden date</button>
-  
+
   <ul *ngIf="showData === true">
     <li><b>movie: </b> {{movie.title}}</li>
     <li><b>director: </b> {{movie.director}}</li>
@@ -27,7 +27,7 @@
       <li (click)="onChangeMovie(row)" class="movie-title" [class.clicked]="movieSeleted.title === row.title"><b>movie: </b> {{row.title}}</li>
       <li><b>director: </b> {{row.director}}</li>
       <li *ngIf="row.year"><b>year: </b> {{row.year}}</li>
-      <li><a [routerLink]="['Addmovieparameter',{title: row.title}]">Add movie based on this</a></li>
+      <li><a [routerLink]="['Addmovieparameter',{title: row.title, director: row.director, year: row.year}]">Add movie based on this</a></li>
     </ul>
   </ul>
 </div>

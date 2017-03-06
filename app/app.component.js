@@ -51,7 +51,7 @@ System.register(["angular2/core", "./components/movies-list.component", "./compo
                 router_1.RouteConfig([
                     { path: '/movies', name: "Movies", component: movies_list_component_1.MoviesListComponent, useAsDefault: true },
                     { path: '/add-movie', name: "Addmovie", component: add_movie_component_1.AddMovieComponent },
-                    { path: '/add-movie/:title', name: "Addmovieparameter", component: add_movie_component_1.AddMovieComponent },
+                    { path: '/add-movie/:title/:director/:year', name: "Addmovieparameter", component: add_movie_component_1.AddMovieComponent },
                     { path: '/contact', name: "Contact", component: contact_component_1.ContactComponent }
                 ])
                 /*

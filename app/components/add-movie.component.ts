@@ -15,6 +15,7 @@ import {MoviesService} from '../services/movies.services';  // import service
 export class AddMovieComponent implements OnInit{
 
   public TitleMovie = "";
+  public newMovie: Movie;
 
   constructor(private _moviesServices:MoviesService,
     private _router: Router,
@@ -22,14 +23,20 @@ export class AddMovieComponent implements OnInit{
 
     }
 
-    onAddMovie(title, director, year){
-      let movie: Movie = new Movie(77, title, "N/A", director, year);
-      this._moviesServices.insertMovie(movie);
+    onSubmit(){
+      this._moviesServices.insertMovie(this.newMovie);
       this._router.navigate(["Movies"]);
     }
 
     ngOnInit():any{
       this.TitleMovie = this._routeParams.get("title");
+      this.newMovie= new Movie(
+        0,
+        this._routeParams.get("title"),
+        "N/A",
+        this._routeParams.get("director"),
+        parseInt(this._routeParams.get("year"))
+      );
     }
 
   }
