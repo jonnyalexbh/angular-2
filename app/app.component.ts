@@ -25,7 +25,8 @@ import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router';  // rout
 */
 @RouteConfig([
   {path: '/movies', name: "Movies", component: MoviesListComponent, useAsDefault: true},
-  {path: '/add-movie', name: "Add movie", component: AddMovieComponent},
+  {path: '/add-movie', name: "Addmovie", component: AddMovieComponent},
+  {path: '/add-movie/:title', name: "Addmovieparameter", component: AddMovieComponent},
   {path: '/contact', name: "Contact", component: ContactComponent}
 ])
 /*

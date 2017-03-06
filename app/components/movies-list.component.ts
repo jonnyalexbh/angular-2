@@ -4,6 +4,7 @@
 import {Component} from 'angular2/core';
 import {Movie} from '../model/movie';                       // import model
 import {MoviesService} from '../services/movies.services';  // import service
+import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router';  // route
 /*
 * decorador component indicamos el selector donde cargar la
 * plantilla y definimos el html de la plantilla.
@@ -12,7 +13,8 @@ import {MoviesService} from '../services/movies.services';  // import service
   selector: 'movies-list',
   templateUrl:"app/views/movies-list.html",
   styleUrls:["assets/css/styles.css"],
-  providers:[MoviesService]
+  providers:[MoviesService],
+  directives: [ROUTER_DIRECTIVES]
 })
 /*
 * exportamos la clase para que el componente este disponible
