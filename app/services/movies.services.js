@@ -27,6 +27,9 @@ System.register(["angular2/core", "./mock.movies"], function (exports_1, context
                 MoviesService.prototype.getMovies = function () {
                     return mock_movies_1.Movies;
                 };
+                MoviesService.prototype.insertMovie = function (movie) {
+                    Promise.resolve(mock_movies_1.Movies).then(function (movies) { return movies.push(movie); });
+                };
                 return MoviesService;
             }());
             MoviesService = __decorate([

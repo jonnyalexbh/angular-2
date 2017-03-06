@@ -6,7 +6,7 @@
   <h1>{{movie.title}}</h1>
 
   <p>favorite movie</p>
-  
+
   <button (click)="onShowHide(true)" [class.showingData]="showData === true">Show date</button>
   <button (click)="onShowHide(false)" [class.showingData]="showData === false">hidden date</button>
 
@@ -24,7 +24,7 @@
   <ul>
     <ul *ngFor="#row of movies" style="margin-bottom: 15px;">
       <li><b>id: </b> {{row.id}}</li>
-      <li (click)="onChangeMovie(row)" class="movie-title" [class.clicked]="movieSeleted.id === row.id"><b>movie: </b> {{row.title}}</li>
+      <li (click)="onChangeMovie(row)" class="movie-title" [class.clicked]="movieSeleted.title === row.title"><b>movie: </b> {{row.title}}</li>
       <li><b>director: </b> {{row.director}}</li>
       <li *ngIf="row.year"><b>year: </b> {{row.year}}</li>
     </ul>
